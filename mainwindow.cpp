@@ -35,17 +35,20 @@ MainWindow::~MainWindow()
 void MainWindow::on_actionZoomIn_triggered()
 {
     wgt->factor = 1.11 * wgt->factor;
+    wgt->update();
 }
 
 void MainWindow::on_actionZoomOut_triggered()
 {;
     wgt->factor = 0.9 *wgt->factor;
 
+    wgt->update();
 }
 
 void MainWindow::on_actionNormalSize_triggered()
 {
     wgt->factor = 1.0;
+    wgt->update();
 }
 
 void MainWindow::on_ZoomIn_clicked()
